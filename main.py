@@ -1,10 +1,15 @@
 import re
 
 def check_the_string(text):
-    pattern = r'(^#[0-9a-fA-F]{6}$)'
+    pattern = r"#[0-9a-fA-F]{6}\b"
     answer = re.findall(pattern, text)
     return answer
 
-t = input()
+def check_the_file(path):
+    file = open(path)
+    s = file.read()
+    return check_the_string(s)
 
-print(check_the_string(t))
+
+t = 'example.txt'
+print(check_the_file(t))
