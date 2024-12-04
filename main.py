@@ -45,8 +45,6 @@ class MainProgram:
                 print("Введите url")
                 ex = str(input())
                 print(self.check_the_url(ex))
-            elif t == 4:
-                exit(0)
 
 
 solution = MainProgram()

@@ -26,10 +26,3 @@ class TestCheckAll(unittest.TestCase):
         example_html = "<html><body>picker_wrapper{background:#f2f2f2}input:active{#1e90ff}</body></html>"
         self.assertEqual(MainProgram.check_the_string(solution, text=example_html),
                          "Все найденные цвета: ['#f2f2f2', '#1e90ff']")
-
-
-
-
-
-
-
