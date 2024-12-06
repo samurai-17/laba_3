@@ -5,6 +5,7 @@ import requests
 class MainProgram:
 
     def check_the_string(self, text):
+        """Функция проверки строчки"""
         pattern = r"#[0-9a-fA-F]{6}\b"
         answer = re.findall(pattern, text)
         if not answer:
@@ -12,6 +13,7 @@ class MainProgram:
         return f"Все найденные цвета: {answer}"
 
     def check_the_file(self, path):
+        """Функция проверки файла"""
         try:
             with open(path, encoding="utf-8") as file:
                 s = file.read()
@@ -20,6 +22,7 @@ class MainProgram:
             return f"Ошибка открытия файла: {e}"
 
     def check_the_url(self, url):
+        """Функция проверки сайта"""
         try:
             response = requests.get(url)
             response.raise_for_status()
@@ -28,6 +31,7 @@ class MainProgram:
             return f"Ошибка чтения страницы: {e}"
 
     def main_window(self):
+        """Запуск программы"""
         t = 1
         while t != 0:
             print("Что вы хотите проверить?")
