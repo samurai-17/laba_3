@@ -51,5 +51,6 @@ class MainProgram:
                 print(self.check_the_url(ex))
 
 
-solution = MainProgram()
-solution.main_window()
+if __name__ == "__main__":
+    solution = MainProgram()
+    solution.main_window()
